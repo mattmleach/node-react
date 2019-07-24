@@ -1,21 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import JobTable from "./JobTable";
+import styled from "styled-components";
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+`;
+
+const TableBox = styled.div`
+  width: 100%;
+`;
 
 class Home extends React.Component {
-    render() {
-        return (
-            <div>
-                <Link to="/login">Logout</Link>
-                <h1>Hi {this.props.user.name} Welcome to our Experiment</h1>
-                <p />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <Content>
+        <TableBox>
+          <JobTable />
+        </TableBox>
+      </Content>
+    );
+  }
 }
 
-const mapStateToProps = state => {
-    return { user: state.authentication.user };
-};
-
-export default connect(mapStateToProps)(Home);
+export default Home;
