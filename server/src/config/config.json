@@ -1,0 +1,28 @@
+{
+  "development": {
+    "dialect": "mssql",
+    "username": "symtest",
+    "password": "symtest",
+    "dialectOptions": {
+      "instanceName": "SQLEXPRESS"
+    },
+    "host": "localhost",
+    "database": "test"
+  },
+
+  "test": {
+    "dialect": "mssql",
+    "dialectModulePath": "sequelize-msnodesqlv8",
+    "dialectOptions": {
+      "connectionString": "Driver={SQL Server Native Client 10.0};Server=DB903\\alogent_dev2;Database=gateway;Trusted_Connection=yes;"
+    }
+  },
+
+  "production": {
+    "dialect": "mssql",
+    "dialectModulePath": "sequelize-msnodesqlv8",
+    "dialectOptions": {
+      "connectionString": "Driver={SQL Server Native Client 10.0};Server=DB903\\alogent_dev2;Database=gateway;Trusted_Connection=yes;"
+    }
+  }
+}
