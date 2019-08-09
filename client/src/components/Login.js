@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
-import { userActions } from "../../actions";
+import { userActions } from "../actions";
 import styled from "styled-components";
 
 const loginValidation = Yup.object().shape({

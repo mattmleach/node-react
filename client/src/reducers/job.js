@@ -1,14 +1,14 @@
-import { jobConstants } from "../constants";
+import { jobConstants } from "../actions";
 
 const initialState = { jobs: [], loading: false, err: null };
 
-export function jobs(state = initialState, action) {
+export function job(state = initialState, action) {
   switch (action.type) {
-    case jobConstants.FETCH_JOBS_REQUEST:
+    case jobConstants.LOAD_JOBS_REQUEST:
       return { ...state, loading: true, error: null };
-    case jobConstants.FETCH_JOBS_SUCCESS:
+    case jobConstants.LOAD_JOBS_SUCCESS:
       return { ...state, loading: false, jobs: action.jobs };
-    case jobConstants.FETCH_JOBS_FAILURE:
+    case jobConstants.LOAD_JOBS_FAILURE:
       return {
         ...state,
         loading: false,

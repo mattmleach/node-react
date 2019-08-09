@@ -1,8 +1,8 @@
 export const jobService = {
-  getJobs
+  loadJobs
 };
 
-async function getJobs() {
+async function loadJobs() {
   let res = await fetch("http://localhost:4000/api/jobs");
   let jobs = await res.text();
 

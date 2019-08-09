@@ -1,11 +1,13 @@
 import { combineReducers } from "redux";
 
 import { authentication } from "./authentication";
-import { jobs } from "./jobs";
+import { job } from "./job";
+import { report } from "./report";
 
 const rootReducer = combineReducers({
   authentication,
-  jobs
+  job,
+  report
 });
 
 export default rootReducer;

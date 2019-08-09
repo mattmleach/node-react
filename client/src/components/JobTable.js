@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import MaterialTable from "material-table";
 import { format } from "date-fns";
-import { jobActions } from "../../actions";
+import { jobActions } from "../actions";
 
 class JobTable extends React.Component {
   componentDidMount() {
